@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeyuk Bibimbap House</title>
+    <!-- Favicon: Add your favicon link here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Dongle&family=Jersey+15&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Open Graph Meta Tags: Add OG tags here -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <style>
+      img {
+        /* width: 150px; */
+        height: 150px;
+        object-fit: cover;
+      }
+      .jersey-15-regular {
+        font-family: "Jersey 15", serif;
+        font-style: normal;
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body style="background-color: #ffdfde; color: #6a7ba2">
+    <div class="container py-5">
+      <header class="text-center mb-5">
+        <h1 class="fw-bold jersey-15-regular">Welcome to 핑구 House</h1>
+        <p class="lead jersey-15-regular">
+          The best Korean spicy pork rice bowl in town!
+        </p>
+      </header>
+
+      <!-- Carousel -->
+      <div
+        id="menuCarousel"
+        class="carousel slide mb-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="pinggu.jpg"
+              class="d-block w-100"
+              alt="Delicious Jeyuk Bibimbap"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Our Signature Dish</h5>
+              <p>Experience the authentic taste of Korea.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="pinggu2.jpg"
+              class="d-block w-100"
+              alt="Fresh Ingredients"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fresh Ingredients</h5>
+              <p>Locally sourced for the best quality.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="pinggu3.jpg" class="d-block w-100" alt="Cozy Interior" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Cozy Ambience</h5>
+              <p>A perfect place for family and friends.</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#menuCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#menuCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Cards -->
+      <div class="row mb-5">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="pinggu.jpg" class="card-img-top" alt="Menu Item" />
+            <div class="card-body">
+              <h5 class="card-title">Spicy Pork Bibimbap</h5>
+              <p class="card-text">A perfect balance of flavors and spices.</p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="background-color: #6a7ba2; border-color: #6a7ba2"
+                data-bs-toggle="modal"
+                data-bs-target="#spicyPorkModal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="pinggu2.jpg" class="card-img-top" alt="Menu Item" />
+            <div class="card-body">
+              <h5 class="card-title">Vegetarian Bibimbap</h5>
+              <p class="card-text">Delicious and healthy for everyone.</p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="background-color: #6a7ba2; border-color: #6a7ba2"
+                data-bs-toggle="modal"
+                data-bs-target="#vegetarianModal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <img src="pinggu3.jpg" class="card-img-top" alt="Menu Item" />
+            <div class="card-body">
+              <h5 class="card-title">Side Dishes</h5>
+              <p class="card-text">
+                Complement your meal with authentic Korean sides.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="background-color: #6a7ba2; border-color: #6a7ba2"
+                data-bs-toggle="modal"
+                data-bs-target="#sideDishesModal"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modals -->
+      <div
+        class="modal fade"
+        id="spicyPorkModal"
+        tabindex="-1"
+        aria-labelledby="spicyPorkModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="spicyPorkModalLabel">
+                Spicy Pork Bibimbap
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Our Spicy Pork Bibimbap is made with tender pork, perfectly
+                spiced and served on a bed of warm rice, accompanied by fresh
+                vegetables and a rich gochujang sauce.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="vegetarianModal"
+        tabindex="-1"
+        aria-labelledby="vegetarianModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="vegetarianModalLabel">
+                Vegetarian Bibimbap
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Our Vegetarian Bibimbap is a healthy and delicious option,
+                featuring a variety of fresh vegetables, tofu, and our signature
+                gochujang sauce served over steamed rice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="sideDishesModal"
+        tabindex="-1"
+        aria-labelledby="sideDishesModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="sideDishesModalLabel">Side Dishes</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Our side dishes include kimchi, pickled radish, and other
+                authentic Korean flavors that perfectly complement your meal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Us Modal -->
+      <div class="text-center">
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="background-color: #6a7ba2; border-color: #6a7ba2"
+          data-bs-toggle="modal"
+          data-bs-target="#contactModal"
+        >
+          Contact Us
+        </button>
+      </div>
+
+      <div
+        class="modal fade"
+        id="contactModal"
+        tabindex="-1"
+        aria-labelledby="contactModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">Get in Touch</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Contact us at
+                <a href="dmsskgus@sm.ac.kr">dmsskgus@sm.ac.kr</a>
+                or call us at (123) 456-7890.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
